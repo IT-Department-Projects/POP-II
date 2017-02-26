@@ -1,0 +1,132 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Wheels On Roll - The Team</title>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <title>Wheels On Roll</title>
+  
+  <script type="text/javascript" src="js/team.json"></script>
+  <script type="text/javascript">
+
+  function get_model(member){
+    var model = "";
+    model += '<div class="team-member col s12 m6 l6"><div class="card center-align">';
+    model += '<div class="card-content">';
+    model += '<div class="team-member-bg green"></div>';
+    model += '<img src="'+member.image+'" class="circle responsive-img materialboxed" data-caption="'+member.name+'">';
+    model += '<h4>'+member.name+'</h4>';
+    model += member.position+'<br/><br/>';
+    model += member.email+'<br/>';
+    model += member.mobile+'<br/>';
+    model += '<div class="row">';
+    model += '<a href="'+member.linkedin+'"><img src="images/logo_linkedin.png" id="social-media"></a>';
+    model += '<a href="'+member.facebook+'"><img src="images/logo_fb.png" id="social-media"></a>'
+    model += '</div></div></div>';
+
+    return model;
+  }
+
+  function load_members(){
+    var gallery_container = document.getElementById("gallery");
+    // Core members
+    var gallery_row;
+    gallery_container.innerHTML += '<h2 class="label">Founding Team</h2>';
+    for(var i=0;i<core_members.length;i++){
+      if(i%2==0){
+        gallery_container.innerHTML += '<div class="row" id="core-gallery-row-'+i+'"></div>';
+        gallery_row = document.getElementById('core-gallery-row-'+i);
+      }
+      var member = core_members[i];
+      gallery_row.innerHTML += '<div class="gallery" id="core-member-'+i+'"></div>';
+      var member_container = document.getElementById('core-member-'+i);
+      member_container.innerHTML += get_model(member);
+    }
+    // Tech Members
+    gallery_container.innerHTML += '<h2 class="label">Tech Team</h2>';
+    for(var i=0;i<tech_members.length;i++){
+      if(i%2==0){
+        gallery_container.innerHTML += '<div class="row" id="tech-gallery-row-'+i+'"></div>';
+        gallery_row = document.getElementById('tech-gallery-row-'+i);
+      }
+      var member = tech_members[i];
+      gallery_row.innerHTML += '<div class="gallery" id="tech-member-'+i+'"></div>';
+      var member_container = document.getElementById('tech-member-'+i);
+      member_container.innerHTML += get_model(member);
+    }
+  }
+
+  </script>
+
+</head>
+<body onload="init();load_members();"><center>
+
+  <div class="bg" style="margin-bottom: 10px !important;"></div>
+
+  <div class="home-text left-align">
+    <b>WHEELS<br/>ON<br/>ROLL<br/></b>
+    <div class="home-tag">#YouRollWeCare</div>
+  </div>
+
+  <div class="navblocks">
+    <a href="index.html" class="navblock">Home</a>
+    <a href="team.html" class="navblock">Team</a>
+    <a href="timeline.html" class="navblock">Timeline</a>
+    <a href="contact.html" class="navblock">Contact Us</a>
+  </div>
+
+  <div class="container" id="gallery">
+  </div>
+
+</center>
+
+  <footer class="page-footer green white-text">
+    <div class="row">
+      <div class="col s12 m3 l3 center-align">
+        <img src="images/wor-logo.png" style="width: 60%; margin: 10%;">
+        <h5>Wheels On Roll</h5>
+      </div>
+      <div class="col s12 m4 offset-m1 l4 offset-l1">
+        <h5>Contact</h5>
+        <div class="footer-email">
+          <i class="material-icons">mail</i>
+          <a class="white-text" href="mailto:contact@wheelsonroll.com">&nbsp;&nbsp;contact@wheelsonroll.com</a>
+        </div><br>
+        <i class="material-icons valign">place</i><br>
+        WOR - Office, STEP - NITK Beach Road, Western Campus,
+        NITK, Surathkal, Mangalore - 575025
+      </div>
+      <div class="col s12 m2 l2">
+        <h5>Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+          <li><a class="grey-text text-lighten-3" href="team.html">Team</a></li>
+          <li><a class="grey-text text-lighten-3" href="timeline.html">Timeline</a></li>
+        </ul>
+      </div>
+      <div class="col s12 m2 l2">
+        <h5>&nbsp;</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="contact.html">Contact</a></li>
+          <li><a class="grey-text text-lighten-3" href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copyright" style="background: rgb(38,88,39);">
+      <div class="container white-text">
+      &nbsp;&nbsp;© 2017 Wheels on Roll
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

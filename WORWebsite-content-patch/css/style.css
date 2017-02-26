@@ -1,0 +1,220 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: rgb(233, 234, 237);
+}
+
+.bg {
+	display: block;
+	vertical-align: middle;
+	width: 100%;
+	height: 58vw;
+	margin-bottom: -10%;
+	overflow: hidden;
+	z-index: 0 !important;
+	background-image: url(../images/wor_bg.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+.bg img {
+	width: 100%;
+	min-height: 100%;
+	z-index: 0;
+}
+
+.home-text {
+	position: absolute;
+	top: 10vmin;
+	left: 10vmin;
+	color: white;
+	line-height: 1;
+	font-size: 4em;
+}
+
+.home-text, .navblocks, .container {
+	opacity: 0;
+	margin-top: -10px;
+	-webkit-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.home-tag {
+	opacity: 0.85;
+	font-size: 0.5em;
+}
+
+.navblocks {
+	position: absolute;
+	top: 10vmin;
+	right: 10vmin;
+	text-align: right;
+}
+
+.navblock {
+	display: inline-block;
+	padding: 10px;
+	font-weight: bold;
+	text-align: right;
+	color: white;
+	opacity: 0.8;
+}
+
+.navblock:hover {
+	opacity: 1;
+}
+
+.news-links {
+	margin-top: 20px;
+}
+
+.news-links img {
+	max-width: 100%;
+	height: 80px;
+	-webkit-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+	opacity: 0.8;
+}
+
+.news-links img:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+	opacity: 1;
+}
+
+#services img {
+	display: block;
+	float: center;
+	height: 50px;
+}
+
+#services span {
+	padding-left: 25px;
+}
+
+#gallery {
+	padding-top: 30px;
+}
+
+#gallery .row {
+	margin-bottom: 0 !important;
+}
+
+.team-member {
+	display: block;
+	padding: 5px !important;
+}
+
+.team-member .card-content {
+	padding: 10px;
+}
+
+.team-member-bg {
+	width: 100%;
+	height: 100px;
+	margin-bottom: -60px;
+}
+
+.team-member img {
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+}
+
+.team-member #social-media {
+	width: 50px !important;
+	height: 50px !important;
+	margin: 10px !important;
+}
+
+.timeline-content .card-title {
+	line-height: 1 !important;
+}
+
+.timeline-content p {
+	padding-top: 10px;
+}
+
+.carousel img {
+	min-height: 100%;
+}
+
+.slider {
+	height: auto !important;
+}
+
+.slider .slides, .slider li, .photos {
+	max-height: 57vw !important;
+}
+
+.sending-mail {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	margin: 0;
+}
+
+.member {
+	padding: 10px !important;
+}
+
+.member img {
+	width: 100%;
+	padding: 5px;
+}
+
+.footer-email i {
+	transform: translateY(30%);
+}
+
+@media only screen and (max-width : 720px) {
+
+	.container, footer, .footer-email {
+		text-align: center !important;
+	}
+
+	.bg {
+		width: 100%;
+		height: 133.33vw;
+		background-image: url(../images/wor_bg_mob.jpg);
+	}
+
+	.home-text {
+		font-size: 13vw;
+	}
+
+	.navblocks {
+		display: none;
+	}
+
+	.news-links img {
+		-webkit-filter: grayscale(0);
+		filter: grayscale(0);
+		opacity: 1;
+	}
+
+	#services {
+		text-align: center;
+	}
+
+	#services span {
+		padding-top: 5px;
+		padding-left: 0;
+	}
+
+	.row {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	.container {
+		width: 100% !important;
+	}
+
+}
